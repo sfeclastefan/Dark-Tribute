@@ -394,6 +394,10 @@ button {
   .episode-image {
     width: 100%;
   }
+
+  #castsContainer {
+    width: 100%;
+  }
 }
 
 /*#preloader {
