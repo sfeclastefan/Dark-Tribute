@@ -375,13 +375,13 @@ button {
     width: 5vw;
   }
 
-  /*  .hiddenImg {
+  .hiddenImg {
     display: none;
   }
 
-  .actorContainer div {
-    width: auto;
-  } */
+  .hiddenTextDetails {
+    opacity: 1;
+  }
 }
 
 /*#preloader {
