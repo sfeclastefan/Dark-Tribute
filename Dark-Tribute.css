@@ -388,6 +388,10 @@ button {
   .actorContainer div {
     margin: 3vw;
   }
+
+  #backgroundCast {
+    display: none;
+  }
 }
 
 /*#preloader {
