@@ -108,25 +108,47 @@ function hiddenSeason(id) {
 
   let seasonsButton = document.getElementById("showHideSeasonButton" + id);
   let episodeContainer = document.getElementById("episodes-container" + id);
-  let episodeTitle = episodeContainer.getElementsByClassName("episode-title")[0]
+  let episodeTitle = episodeContainer.getElementsByClassName("episode-title")[0];
 
-  if (episodeContainer.style.display == "none") {
+  if (window.innerWidth < 768) {
+    if (episodeContainer.style.display == "block") {
 
-    seasonsButton.className = "animate__animated animate__fadeInDown"
+      seasonsButton.className = "animate__animated animate__fadeInDown"
 
-    episodeContainer.style.display = "block";
-    episodeContainer.className = "animate__animated animate__pulse"
+      episodeContainer.style.display = "none";
+      episodeContainer.className = "animate__animated animate__pulse"
 
-    episodeTitle.style.visibility = "hidden"
+      episodeTitle.style.visibility = "hidden"
 
-    seasonsButton.disabled = true;
-    setTimeout(function() {
-      seasonsButton.disabled = false
-    }, 1500);
+      seasonsButton.disabled = true;
+      setTimeout(function() {
+        seasonsButton.disabled = false
+      }, 1500);
 
+    } else {
+      episodeContainer.style.display = "block";
+    }
   } else {
-    episodeContainer.style.display = "none";
+    if (episodeContainer.style.display == "none") {
+
+      seasonsButton.className = "animate__animated animate__fadeInDown"
+
+      episodeContainer.style.display = "block";
+      episodeContainer.className = "animate__animated animate__pulse"
+
+      episodeTitle.style.visibility = "hidden"
+
+      seasonsButton.disabled = true;
+      setTimeout(function() {
+        seasonsButton.disabled = false
+      }, 1500);
+
+    } else {
+      episodeContainer.style.display = "none";
+    }
   }
+
+
 
   setTimeout(function() {
     episodeContainer.className = "episodes-container"
