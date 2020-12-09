@@ -390,6 +390,10 @@ button {
     margin: 3vw;
     width: 100%;
   }
+
+  .episode-image {
+    width: 100%;
+  }
 }
 
 /*#preloader {
