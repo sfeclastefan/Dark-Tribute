@@ -374,6 +374,7 @@ button {
     height: 10vh;
     width: 5vw;
     order: 1;
+    pointer-events: none;
   }
 
   .hiddenImg {
@@ -387,6 +388,7 @@ button {
 
   .actorContainer div {
     margin: 3vw;
+    width: 100%;
   }
 }
 
