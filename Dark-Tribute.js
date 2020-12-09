@@ -16,9 +16,11 @@ function loadingScreen() {
 
 
   var myScrollFunc = function() {
-    coorsLastEp = document.getElementsByClassName("episode-container")[27].getBoundingClientRect().top + window.scrollY;
+    coorsLastEp = document.getElementsByClassName("actorContainer")[0].getBoundingClientRect().top + window.scrollY;
+    console.log(coorsLastEp)
+    console.log("y curent = " + window.scrollY)
     var y = window.scrollY;
-    if (y > coorsLastEp + 0.18 * coorsLastEp) {
+    if (y >= coorsLastEp - 0.12 * coorsLastEp) {
       headerCast.className = "headerCast animate__animated animate__backInUp "
       headerCast.style.opacity = 1;
     }
@@ -70,10 +72,6 @@ function showActorDetails(n) {
   }
 
 }
-
-
-
-
 
 
 function hideActorDetails(n) {
