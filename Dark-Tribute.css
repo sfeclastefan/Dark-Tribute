@@ -394,7 +394,7 @@ button {
   .episode-image {
     width: auto;
     height: auto;
-    position: relative;
+    overflow: hidden;
   }
 
   #castsContainer {
