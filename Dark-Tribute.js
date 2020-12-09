@@ -22,9 +22,6 @@ function loadingScreen() {
       headerCast.className = "headerCast animate__animated animate__backInUp "
       headerCast.style.opacity = 1;
     }
-
-
-
   }
 
   window.addEventListener("scroll", myScrollFunc);
@@ -133,6 +130,5 @@ function hiddenSeason(id) {
   setTimeout(function() {
     episodeTitle.style.visibility = "visible"
   }, 1700);
-
 
 }
