@@ -383,7 +383,7 @@ button {
     opacity: 1;
   }
 
-  .actorContainer {
+  .actorContainer div {
     margin: 3vw;
   }
 }
