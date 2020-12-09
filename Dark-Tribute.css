@@ -361,6 +361,10 @@ button {
     width: 100%;
   }
 
+  #castsContainer {
+    width: 100%;
+  }
+
   .episode-image {
     width: auto;
     height: auto;
