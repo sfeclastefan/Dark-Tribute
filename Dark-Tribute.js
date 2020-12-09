@@ -10,14 +10,23 @@ function loadingScreen() {
     $(this).scrollTop(0);
   });
 
+  actorContainer = document.getElementsByClassName("actorContainer");
+  coorsLastEp = document.getElementsByClassName("episode-container")[27].getBoundingClientRect();
+  headerCast = document.getElementById("headerCast");
 
-  myID = document.getElementById("headerCast");
+
   var myScrollFunc = function() {
+    coorsLastEp = document.getElementsByClassName("episode-container")[27].getBoundingClientRect().top + window.scrollY;
     var y = window.scrollY;
-    if (y >= 3620) {
-      myID.className = "headerCast show"
+    if (y > coorsLastEp + 0.18 * coorsLastEp) {
+      headerCast.className = "headerCast animate__animated animate__backInUp "
+      headerCast.style.opacity = 1;
     }
-  };
+
+
+
+  }
+
   window.addEventListener("scroll", myScrollFunc);
 }
 
@@ -29,7 +38,6 @@ var coordinatesMainImg;
 function resetCoordinates() {
   coordinatesHiddenText = null;
   coordinatesMainImg = null;
-  console.log("yes")
 }
 
 function showActorDetails(n) {
