@@ -382,6 +382,10 @@ button {
   .hiddenTextDetails {
     opacity: 1;
   }
+
+  .actorContainer {
+    margin: 3vw;
+  }
 }
 
 /*#preloader {
