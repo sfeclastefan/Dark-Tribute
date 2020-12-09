@@ -373,6 +373,7 @@ button {
   .actorImg {
     height: 10vh;
     width: 5vw;
+    order: 1;
   }
 
   .hiddenImg {
@@ -381,6 +382,7 @@ button {
 
   .hiddenTextDetails {
     opacity: 1;
+    order: 2;
   }
 
   .actorContainer div {
