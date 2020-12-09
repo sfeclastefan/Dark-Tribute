@@ -25,6 +25,13 @@ function loadingScreen() {
   }
 
   window.addEventListener("scroll", myScrollFunc);
+
+  if (window.innerWidth < 768) {
+    let vari = document.getElementsByTagName("div");
+    for (let i = 0; i < vari.length; i++)
+      vari[i].setAttribute("onmouseleave", "");
+
+  }
 }
 
 
@@ -63,6 +70,10 @@ function showActorDetails(n) {
   }
 
 }
+
+
+
+
 
 
 function hideActorDetails(n) {
