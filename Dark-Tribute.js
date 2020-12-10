@@ -14,14 +14,24 @@ function loadingScreen() {
   actorContainer = document.getElementsByClassName("actorContainer");
   headerCast = document.getElementById("headerCast");
   var myScrollFunc = function() {
-    coorsFirstActorContainer = actorContainer[0].getBoundingClientRect().top + window.scrollY;
+    coordsFirstActorContainer = actorContainer[0].getBoundingClientRect().top + window.scrollY;
     var y = window.scrollY;
-    if (y >= coorsFirstActorContainer - 0.12 * coorsFirstActorContainer) {
-      headerCast.className = "headerCast animate__animated animate__backInUp "
-      headerCast.style.opacity = 1;
+    if (window.innerWidth < 768) {
+      console.log(coordsFirstActorContainer + " si y curent = " + y)
+      if (y >= coordsFirstActorContainer - 0.5 * coordsFirstActorContainer) {
+
+        headerCast.className = "headerCast animate__animated animate__backInUp "
+        headerCast.style.opacity = 1;
+      }
+    } else {
+      if (y >= coordsFirstActorContainer - 0.12 * coordsFirstActorContainer) {
+        headerCast.className = "headerCast animate__animated animate__backInUp "
+        headerCast.style.opacity = 1;
+      }
     }
   }
   window.addEventListener("scroll", myScrollFunc);
+
 
   onMouseLeaveClass = document.getElementsByClassName("leave");
   if (window.innerWidth < 768) {
@@ -154,8 +164,6 @@ function hiddenSeason(id) {
       episodeContainer.style.display = "none";
     }
   }
-
-
 
   setTimeout(function() {
     episodeContainer.className = "episodes-container"
