@@ -61,6 +61,7 @@ body {
 }
 
 #down-button a {
+  cursor: pointer;
   width: 4vw;
   display: block;
   margin-left: auto;

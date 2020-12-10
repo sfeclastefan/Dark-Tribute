@@ -17,9 +17,7 @@ function loadingScreen() {
     coordsFirstActorContainer = actorContainer[0].getBoundingClientRect().top + window.scrollY;
     var y = window.scrollY;
     if (window.innerWidth < 768) {
-      console.log(coordsFirstActorContainer + " si y curent = " + y)
       if (y >= coordsFirstActorContainer - 0.5 * coordsFirstActorContainer) {
-
         headerCast.className = "headerCast animate__animated animate__backInUp "
         headerCast.style.opacity = 1;
       }
@@ -88,6 +86,12 @@ function showActorDetails(n) {
     }, 200)
   }
 
+}
+
+function goToSeasons() {
+  let coordsSeasonsContainer = document.getElementById("seasonsContainer").getBoundingClientRect().top;
+  window.scrollTo(0, coordsSeasonsContainer);
+  console.log(coordsSeasonsContainer)
 }
 
 
