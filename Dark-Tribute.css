@@ -350,6 +350,8 @@ button {
   color: red;
 }
 
+.leave {}
+
 @media only screen and (max-width: 768px) {
 
   /* For mobile phones: */
@@ -394,6 +396,10 @@ button {
   .episode-image {
     width: 80%;
     height: auto;
+  }
+
+  .episode-image:hover {
+    transform: none;
   }
 
   #castsContainer {

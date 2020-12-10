@@ -10,41 +10,48 @@ function loadingScreen() {
     $(this).scrollTop(0);
   });
 
+
   actorContainer = document.getElementsByClassName("actorContainer");
-  coorsLastEp = document.getElementsByClassName("episode-container")[27].getBoundingClientRect();
   headerCast = document.getElementById("headerCast");
-
-
   var myScrollFunc = function() {
-    coorsLastEp = document.getElementsByClassName("actorContainer")[0].getBoundingClientRect().top + window.scrollY;
-    console.log(coorsLastEp)
-    console.log("y curent = " + window.scrollY)
+    coorsFirstActorContainer = actorContainer[0].getBoundingClientRect().top + window.scrollY;
     var y = window.scrollY;
-    if (y >= coorsLastEp - 0.12 * coorsLastEp) {
+    if (y >= coorsFirstActorContainer - 0.12 * coorsFirstActorContainer) {
       headerCast.className = "headerCast animate__animated animate__backInUp "
       headerCast.style.opacity = 1;
     }
   }
-
   window.addEventListener("scroll", myScrollFunc);
 
+  onMouseLeaveClass = document.getElementsByClassName("leave");
   if (window.innerWidth < 768) {
-    let vari = document.getElementsByTagName("div");
-    for (let i = 0; i < vari.length; i++)
-      vari[i].setAttribute("onmouseleave", "");
-
+    for (let i = 0; i < onMouseLeaveClass.length; i++)
+      onMouseLeaveClass[i].setAttribute("onmouseleave", "");
   }
+
+
+  function checkSizeChange() {
+    let hiddenTextDetails = document.getElementsByClassName("hiddenTextDetails");
+    if (window.innerWidth < 768) {
+      for (let i = 0; i < onMouseLeaveClass.length; i++)
+        onMouseLeaveClass[i].setAttribute("onmouseleave", "");
+      for (let j = 0; j < hiddenTextDetails.length; j++)
+        hiddenTextDetails[j].style.opacity = 1;
+
+    } else {
+      for (let i = 0; i < actorContainer.length; i++)
+        onMouseLeaveClass[i].setAttribute("onmouseleave", "hideActorDetails(" + i + ")");
+      for (let j = 0; j < hiddenTextDetails.length; j++)
+        hiddenTextDetails[j].style.opacity = 0;
+    }
+    coordinatesHiddenText = null;
+    coordinatesMainImg = null;
+  }
+  window.onresize = checkSizeChange;
 }
-
-
 
 var coordinatesHiddenText;
 var coordinatesMainImg;
-
-function resetCoordinates() {
-  coordinatesHiddenText = null;
-  coordinatesMainImg = null;
-}
 
 function showActorDetails(n) {
 
