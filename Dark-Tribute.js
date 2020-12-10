@@ -88,10 +88,10 @@ function showActorDetails(n) {
 
 }
 
+
 function goToSeasons() {
-  let coordsSeasonsContainer = document.getElementById("seasonsContainer").getBoundingClientRect().top;
-  window.scrollTo(0, coordsSeasonsContainer);
-  console.log(coordsSeasonsContainer)
+  let coordsSeasonsContainer = document.getElementById("seasonsContainer");
+  coordsSeasonsContainer.scrollIntoView(true);
 }
 
 
