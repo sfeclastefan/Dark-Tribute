@@ -159,11 +159,17 @@ button {
 
 .episode-title {
   font-size: 1rem;
-  margin-bottom: 2vh;
+  border: 2px solid #282828;
+  border-bottom-style: none;
+  border-radius: 20px 20px 0px 0px;
+  background-color: rgba(40, 40, 40, 0.8);
+  height: 4vh;
+  padding: 1%;
 }
 
 .episode-container {
   margin-top: 6vh;
+  transition: transform .5s;
 }
 
 .caption-image {
@@ -177,11 +183,10 @@ button {
 .episode-image {
   height: 28vh;
   width: 27vw;
-  border-radius: 10px;
-  transition: transform .5s;
+  border-radius: 0px 0px 10px 10px;
 }
 
-.episode-image:hover {
+.episode-container:hover {
   transform: scale(1.1);
 }
 
@@ -208,7 +213,7 @@ button {
 
 #backgroundCast {
   background-image: url("img/backgroundTriq.png");
-  background-size: 7vw;
+  background-size: 7.1vw;
   background-color: #424242;
 }
 
@@ -404,6 +409,11 @@ button {
     margin-top: 7vh;
   }
 
+  .episode-container:hover {
+    margin-top: 7vh;
+    transform: none;
+  }
+
   .actorImg {
     height: 10vh;
     width: 5vw;
@@ -428,10 +438,6 @@ button {
   .episode-image {
     width: 80%;
     height: auto;
-  }
-
-  .episode-image:hover {
-    transform: none;
   }
 
   #castContainer {

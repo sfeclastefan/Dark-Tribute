@@ -67,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+
+
+
 var coordinatesHiddenText;
 var coordinatesMainImg;
 
