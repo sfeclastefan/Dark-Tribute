@@ -2,365 +2,91 @@
 <html lang="en" dir="ltr">
 
 <head>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <meta charset="utf-8">
   <title>Dark-Tribute</title>
   <link rel="stylesheet" href="Dark-Tribute.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="Dark-Tribute.js"></script>
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body onload="loadingScreen()">
-
-  <div id="content">
-
-    <div>
-      <img id="logoDark" src="img\logo.png" /><br />
-      <figcaption id="logo-caption">
-        <div><strong>All 3 Seasons Now on Netflix</strong></div>
-        <hr />
-        <span id="takeSpace">s</span>
-        <span id="quote"></span>
-        <span id="when"></span>
-        <hr />
-      </figcaption>
-    </div>
-
-    <img id="main-image" src="img\bg.jpg" />
-
-    <div id="down-button">
-      <a nohref="#" class="smoothScroll" onclick="goToSeasons()">
-        <img src="img\down.png" />
-      </a>
-    </div>
+<body>
 
 
-    <section id="seasonsContainer">
-      <div class="flex-container">
-        <div class="season-container">
-          <strong class="season-title"><button id="showHideSeasonButton1" class="showHideSeasonButton" onclick="hiddenSeason(1)">SEASON 1</button></strong>
+  <div>
+    <img id="logoDark" src="img\logo.png" /><br />
+    <figcaption id="logo-caption">
+      <div><strong>All 3 Seasons Now on Netflix</strong></div>
+      <hr />
+      <span id="takeSpace">s</span>
+      <span id="quote"></span>
+      <span id="when"></span>
+      <hr />
+    </figcaption>
+  </div>
 
-          <div class="episodes-container" id="episodes-container1">
+  <img id="main-image" src="img\bg.jpg" />
 
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
+  <div id="down-button">
+    <a nohref="#" class="smoothScroll" onclick="goToSeasons()">
+      <img src="img\down.png" />
+    </a>
+  </div>
 
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
 
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
+  <section id="seasonsContainer">
+    <div class="flex-container">
 
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
+      <div class="season-container">
+        <strong class="season-title"><button id="showHideSeasonButton1" class="showHideSeasonButton" onclick="hiddenSeason(1)">SEASON 1</button></strong>
+        <div class="episodes-container" id="episodes-container1">
 
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-          </div>
-        </div>
-        <div class="season-container">
-          <strong class="season-title"><button id="showHideSeasonButton2" class="showHideSeasonButton" onclick="hiddenSeason(2)">SEASON 2</button></strong>
-
-          <div class="episodes-container" id="episodes-container2">
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-          </div>
-
-        </div>
-        <div class="season-container">
-          <strong class="season-title"><button id="showHideSeasonButton3" class="showHideSeasonButton" onclick="hiddenSeason(3)">SEASON 3</button></strong>
-          <div class="episodes-container" id="episodes-container3">
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-1.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-
-            <div class="episode-container">
-              <div class="episode-title"><strong>YES</strong></div>
-              <div><img class="episode-image" src="img\Season1\1-2.jpg" /></div>
-              <div class="caption-image">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</div>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
 
-    <section id="headerCast" class="headerCast hide">
-      <p>
-        MAIN CAST
-      </p>
-    </section>
 
-    <div id="backgroundCast">
-      <section id="castsContainer">
-
-        <div class="actorContainer leave" onmouseleave="hideActorDetails(0)">
-
-          <div class="mainImg">
-            <img class="actorImg" src="img\Cast\cast_1-1.jpg" onmouseenter="showActorDetails(0)" />
-          </div>
-
-          <div class=" hiddenTextDetails">
-
-            <p class="realName">Louis Hofmann</p>
-            <p class="characterName">Jonas Kahnwald </br> <span class="characterYear">-2019-</span> </p>
-            <p class="episodesNr">23 episodes</p>
-            <p class="manyDetails">
-              <a href="https://dark-netflix.fandom.com/wiki/Jonas_Kahnwald">Read more about Jonas</a>
-            </p>
-
-          </div>
-
-          <div class="hiddenImg">
-            <img class="actorImg" src="img\Cast\cast_1-2.jpg" />
-          </div>
+      <div class="season-container">
+        <strong class="season-title"><button id="showHideSeasonButton2" class="showHideSeasonButton" onclick="hiddenSeason(2)">SEASON 2</button></strong>
+        <div class="episodes-container" id="episodes-container2">
 
         </div>
+      </div>
 
-        <div class="actorContainer leave" onmouseleave="hideActorDetails(1)">
 
-          <div class="mainImg">
-            <img class="actorImg" src="img\Cast\cast_1-1.jpg" onmouseenter="showActorDetails(1)" />
-          </div>
-
-          <div class=" hiddenTextDetails">
-
-            <p class="realName">Louis Hofmann</p>
-            <p class="characterName">Jonas Kahnwald </br> <span class="characterYear">-2019-</span> </p>
-            <p class="episodesNr">23 episodes</p>
-            <p class="manyDetails">
-              <a href="https://dark-netflix.fandom.com/wiki/Jonas_Kahnwald">Read more about Jonas</a>
-            </p>
-
-          </div>
-
-          <div class="hiddenImg">
-            <img class="actorImg" src="img\Cast\cast_1-2.jpg" />
-          </div>
+      <div class="season-container">
+        <strong class="season-title"><button id="showHideSeasonButton3" class="showHideSeasonButton" onclick="hiddenSeason(3)">SEASON 3</button></strong>
+        <div class="episodes-container" id="episodes-container3">
 
         </div>
+      </div>
 
-        <div class="actorContainer leave" onmouseleave="hideActorDetails(2)">
-
-          <div class="mainImg">
-            <img class="actorImg" src="img\Cast\cast_1-1.jpg" onmouseenter="showActorDetails(2)" />
-          </div>
-
-          <div class=" hiddenTextDetails">
-
-            <p class="realName">Louis Hofmann</p>
-            <p class="characterName">Jonas Kahnwald </br> <span class="characterYear">-2019-</span> </p>
-            <p class="episodesNr">23 episodes</p>
-            <p class="manyDetails">
-              <a href="https://dark-netflix.fandom.com/wiki/Jonas_Kahnwald">Read more about Jonas</a>
-            </p>
-
-          </div>
-
-          <div class="hiddenImg">
-            <img class="actorImg" src="img\Cast\cast_1-2.jpg" />
-          </div>
-
-        </div>
-
-        <div class="actorContainer leave" onmouseleave="hideActorDetails(3)">
-
-          <div class="mainImg">
-            <img class="actorImg" src="img\Cast\cast_1-1.jpg" onmouseenter="showActorDetails(3)" />
-          </div>
-
-          <div class=" hiddenTextDetails">
-
-            <p class="realName">Louis Hofmann</p>
-            <p class="characterName">Jonas Kahnwald </br> <span class="characterYear">-2019-</span> </p>
-            <p class="episodesNr">23 episodes</p>
-            <p class="manyDetails">
-              <a href="https://dark-netflix.fandom.com/wiki/Jonas_Kahnwald">Read more about Jonas</a>
-            </p>
-
-          </div>
-
-          <div class="hiddenImg">
-            <img class="actorImg" src="img\Cast\cast_1-2.jpg" />
-          </div>
-
-        </div>
-
-      </section>
     </div>
+  </section>
 
-    <div id="official-website">
-      <a id="tribute-link" href="https://www.netflix.com/ro-en/title/80100172" target="_blank">Visit Official<span> Netlix</span> Website</a>
-    </div>
+  <section id="headerCast" class="headerCast hide">
+    <p>
+      MAIN CAST
+    </p>
+  </section>
+
+  <div id="backgroundCast">
+    <section id="castContainer">
+
+    </section>
+  </div>
+
+  <div id="official-website">
+    <a id="tribute-link" href="https://www.netflix.com/ro-en/title/80100172" target="_blank">Visit Official<span> Netlix</span> Website</a>
+  </div>
 
   </div>
 
-  <div id="preloader">
-    <svg width="200" height="200" viewBox="0 0 100 100">
-      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-    </svg>
-  </div>
+
 
 </body>
 
 </html>
-
-<!-- <script src="http://localhost:35729/livereload.js"></script>

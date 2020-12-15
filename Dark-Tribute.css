@@ -9,10 +9,6 @@ body {
   width: 100%;
 }
 
-#content {
-  display: none;
-}
-
 #logoDark {
   width: 40vw;
   height: 8vh;
@@ -75,6 +71,12 @@ body {
   width: 4vw;
 }
 
+.readMoreButton {
+  color: white;
+  background: inherit;
+  border: none;
+}
+
 button {
   border: 2px solid #B80F0A;
   border-radius: 25px;
@@ -96,6 +98,10 @@ button {
   transition: 0.8s;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  font-size: 1.4rem;
+  background-color: inherit;
+  font-weight: bold;
 }
 
 .showHideSeasonButton::before {
@@ -164,6 +170,8 @@ button {
   font-size: 0.9rem;
   margin-top: 1vh;
   color: #a3a3a3;
+  text-align: justify;
+  height: 9vh;
 }
 
 .episode-image {
@@ -200,12 +208,11 @@ button {
 
 #backgroundCast {
   background-image: url("img/backgroundTriq.png");
-  background-repeat: round;
-  background-size: 15% 15%;
+  background-size: 7vw;
   background-color: #424242;
 }
 
-#castsContainer {
+#castContainer {
   width: 70vw;
   margin-left: auto;
   margin-right: auto;
@@ -351,7 +358,23 @@ button {
   color: red;
 }
 
+#s {
+  color: white;
+}
+
 .leave {}
+
+@media only screen and (max-width: 968px) {
+  .caption-image {
+    height: 11.5vh;
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  .caption-image {
+    height: 12vh;
+  }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -362,9 +385,10 @@ button {
 
   .season-container {
     width: 100%;
+    margin-top: 5vh !important;
   }
 
-  .captionImage {
+  .caption-image {
     width: 100%;
     height: auto;
   }
@@ -403,119 +427,7 @@ button {
     transform: none;
   }
 
-  #castsContainer {
+  #castContainer {
     width: 100%;
   }
 }
-
-/*#preloader {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-}
-
-svg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
-  transform: translate(-50%, -50%) rotate(45deg) scale(1);
-}
-
-.stroke-still {
-  stroke: #232323;
-}
-
-.stroke-animation {
-  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
-  animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-delay: 0;
-  animation-delay: 0;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
-  -webkit-transform-origin: center center;
-  transform-origin: center center;
-}
-
-@-webkit-keyframes stroke-spacing {
-  0% {
-    stroke-dasharray: 0 200;
-  }
-
-  45% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 200 200;
-  }
-
-  90% {
-    stroke-dashoffset: -200;
-    stroke-dasharray: 200 200;
-  }
-
-  100% {
-    stroke-dashoffset: -200;
-    stroke-dasharray: 200 200;
-  }
-}
-
-@keyframes stroke-spacing {
-  0% {
-    stroke-dasharray: 0 200;
-  }
-
-  45% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 200 200;
-  }
-
-  90% {
-    stroke-dashoffset: -200;
-    stroke-dasharray: 200 200;
-  }
-
-  100% {
-    stroke-dashoffset: -200;
-    stroke-dasharray: 200 200;
-  }
-}
-
-@-webkit-keyframes stroke-color {
-  0% {
-    stroke: red;
-  }
-
-  24% {
-    stroke: red;
-  }
-
-  25% {
-    stroke: red;
-  }
-
-  49% {
-    stroke: red;
-  }
-
-  50% {
-    stroke: red;
-  }
-
-  74% {
-    stroke: red;
-  }
-
-  75% {
-    stroke: red;
-  }
-
-  99% {
-    stroke: red;
-  }
-}
-*/
