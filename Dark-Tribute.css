@@ -71,12 +71,6 @@ body {
   width: 4vw;
 }
 
-.readMoreButton {
-  color: white;
-  background: inherit;
-  border: none;
-}
-
 button {
   border: 2px solid #B80F0A;
   border-radius: 25px;
@@ -118,10 +112,6 @@ button {
   opacity: 0.9;
 }
 
-.showHideSeasonButton:hover::before {
-  height: 180%;
-}
-
 .showHideSeasonButton:hover {
   background-color: white;
   opacity: 0.9;
@@ -157,6 +147,15 @@ button {
   font-size: 1.5rem;
 }
 
+.episode-container {
+  margin-top: 6vh;
+  transition: transform .5s;
+}
+
+.episode-container:hover {
+  transform: scale(1.1);
+}
+
 .episode-title {
   font-size: 1rem;
   border: 2px solid #282828;
@@ -165,29 +164,20 @@ button {
   background-color: rgba(40, 40, 40, 0.8);
   height: 4vh;
   padding: 1%;
-}
-
-.episode-container {
-  margin-top: 6vh;
-  transition: transform .5s;
-}
-
-.caption-image {
-  font-size: 0.9rem;
-  margin-top: 1vh;
-  color: #a3a3a3;
-  text-align: justify;
-  height: 9vh;
+  color: rgba(255, 250, 250, 0.9);
 }
 
 .episode-image {
   height: 28vh;
   width: 27vw;
-  border-radius: 0px 0px 10px 10px;
+  margin-bottom: -1px;
 }
 
-.episode-container:hover {
-  transform: scale(1.1);
+.caption-image {
+  font-size: 0.9rem;
+  color: #a3a3a3;
+  text-align: justify;
+  height: 9vh;
 }
 
 .headerCast {
@@ -352,6 +342,7 @@ button {
   margin-top: 4vh;
   text-align: center;
   font-weight: bold;
+  visibility: hidden;
 }
 
 #official-website a {

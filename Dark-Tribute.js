@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
       ")  \">  <div class=\"mainImg\"> <img class=\"actorImg\" src=\" " + castList[i].mainImg + " \" onmouseenter=\"  showActorDetails(" + i +
       ") \" /> </div>      <div class=\" hiddenTextDetails\">  <p class=\"realName\"> " + castList[i].realName + "</p>  <p class=\"characterName\"> " + castList[i].characterName +
       "</br> <span class=\"characterYear\">- " + castList[i].year + "-</span> </p>  <p class=\"episodesNr\"> " + castList[i].episodesNr +
-      "</p> <p class=\"manyDetails\">  <a href=\" " + castList[i].moreDetails + "\">Read more about " + castList[i].characterName.split(" ")[0] +
+      "</p> <p class=\"manyDetails\">  <a target=\"_blank\" href=\" " + castList[i].moreDetails + "\">Read more about " + castList[i].characterName.split(" ")[0] +
       " </a> </p> </div>    <div class=\"hiddenImg\"> <img class=\"actorImg\" src=\" " + castList[i].hiddenImg + "\" />  </div> </div> "
   }
 
@@ -247,18 +247,6 @@ var episodes = `
      "episodeTitle": "8. As You Sow, so You Shall Reap",
      "episodeImage": "img/Seasons/1-8.jpg",
      "captionImage": "In 1953, the disfigured bodies of two boys are exhumed at a construction site, the future location of Winden's nuclear power plant."
-   },
-   {
-     "season" : 1,
-     "episodeTitle": "9. Everything Is Now",
-     "episodeImage": "img/Seasons/1-9.jpg",
-     "captionImage": "Ulrich runs afoul of the law, Helge tries to dodge Egon Tiedemann, Claudia harnesses the cave's powers, and Katharina lashes out at Hannah."
-   },
-   {
-     "season" : 1,
-     "episodeTitle": "10. Alpha and Omega",
-     "episodeImage": "img/Seasons/1-10.jpg",
-     "captionImage": "Peter gets a shock. Jonas learns the truth about his family, but there are more surprises still to come. Helge makes a sacrifice."
    },
    {
      "season" : 2,
