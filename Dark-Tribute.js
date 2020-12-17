@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("castContainer").innerHTML += " <div class=\"actorContainer leave\" onmouseleave=\"  hideActorDetails(" + i +
       ")  \">  <div class=\"mainImg\"> <img class=\"actorImg\" src=\" " + castList[i].mainImg + " \" onmouseenter=\"  showActorDetails(" + i +
       ") \" /> </div>      <div class=\" hiddenTextDetails\">  <p class=\"realName\"> " + castList[i].realName + "</p>  <p class=\"characterName\"> " + castList[i].characterName +
-      "</br> <span class=\"characterYear\">- " + castList[i].year + "-</span> </p>  <p class=\"episodesNr\"> " + castList[i].episodesNr +
+      "</br> <span class=\"characterYear\">- " + castList[i].year + "-</span> </p>  <p class=\"episodesNr\"> Episodes: " + castList[i].episodesNr +
       "</p> <p class=\"manyDetails\">  <a target=\"_blank\" href=\" " + castList[i].moreDetails + "\">Read more about " + castList[i].characterName.split(" ")[0] +
       " </a> </p> </div>    <div class=\"hiddenImg\"> <img class=\"actorImg\" src=\" " + castList[i].hiddenImg + "\" />  </div> </div> "
   }
