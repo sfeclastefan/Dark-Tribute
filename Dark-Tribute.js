@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
   for (let i = 0; i < episodesList.length; i++) {
     document.getElementById("episodes-container" + episodesList[i].season).innerHTML +=
       "<div class=\"episode-container\"> <div class=\"episode-title\"><strong>" +
-      episodesList[i].episodeTitle + "</strong></div> <div><img class=\"episode-image\" src=\" " + episodesList[i].episodeImage +
+      episodesList[i].episodeTitle + "</strong></div> <div><img class=\"episode-image\" alt=\" " + episodesList[i].episodeTitle + " \" " + "src=\" " + episodesList[i].episodeImage +
       "\" /></div> <div class=\"caption-image\">" + episodesList[i].captionImage + "</div> </div> "
   }
 
   for (let i = 0; i < castList.length; i++) {
     document.getElementById("castContainer").innerHTML += " <div class=\"actorContainer leave\" onmouseleave=\"  hideActorDetails(" + i +
-      ")  \">  <div class=\"mainImg\"> <img class=\"actorImg\" src=\" " + castList[i].mainImg + " \" onmouseenter=\"  showActorDetails(" + i +
+      ")  \">  <div class=\"mainImg\"> <img class=\"actorImg\"  alt=\" " + castList[i].realName + " \" " + " src=\" " + castList[i].mainImg + " \" onmouseenter=\"  showActorDetails(" + i +
       ") \" /> </div>      <div class=\" hiddenTextDetails\">  <p class=\"realName\"> " + castList[i].realName + "</p>  <p class=\"characterName\"> " + castList[i].characterName +
       "</br> <span class=\"characterYear\">- " + castList[i].year + "-</span> </p>  <p class=\"episodesNr\"> Episodes: " + castList[i].episodesNr +
       "</p> <p class=\"manyDetails\">  <a target=\"_blank\" href=\" " + castList[i].moreDetails + "\">Read more about " + castList[i].characterName.split(" ")[0] +

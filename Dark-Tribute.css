@@ -336,30 +336,6 @@ button {
   order: 3;
 }
 
-#official-website {
-  width: 16%;
-  margin: auto;
-  margin-top: 4vh;
-  text-align: center;
-  font-weight: bold;
-  visibility: hidden;
-}
-
-#official-website a {
-  text-decoration: none;
-  color: white;
-}
-
-#official-website a span {
-  color: red;
-}
-
-#s {
-  color: white;
-}
-
-.leave {}
-
 @media only screen and (max-width: 968px) {
   .caption-image {
     height: 11.5vh;
@@ -373,8 +349,6 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-
-  /* For mobile phones: */
   .flex-container {
     display: block;
   }
